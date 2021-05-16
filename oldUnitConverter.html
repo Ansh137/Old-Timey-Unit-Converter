@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <style>
+h1{
+  font-family: fantasy; font-weight:bold; font-size: 50px;
+  color: Gray;text-decoration: underline;
+}
+body {background-color: yellow}
+    </style>
+    <script>
+      function mile()
+    {
+       var x = document.getElementById("start").value;
+       x = parseInt(x);
+       var y = document.getElementById("end").value;
+       y = parseInt(y);
+       var result = 0;
+       var fnal = "Miles to Furlongs Converter:  <br><hr><br>"
+       for(var i = x; i <= y; i++)
+       {
+          result = i * 8;
+          fnal = fnal + i + "mles: "+ result + " furlongs" + "<br>";
+       }
+       document.getElementById('result1').innerHTML = fnal;
+    }
+
+    function slug()
+    {
+       var x = document.getElementById("start").value;
+       x = parseInt(x);
+       var y = document.getElementById("end").value;
+       y = parseInt(y);
+       var result = 0;
+       var fnal = "Slugs to Pounds Converter: <br><hr><br>"
+       for(var i = x; i <= y; i++)
+       {
+          result = i * 32.174;
+          fnal = fnal + i + "slugs: "+ result + " pounds" + "<br>";
+       }
+       document.getElementById('result2').innerHTML = fnal;
+    }
+
+    function fort()
+    {
+       var x = document.getElementById("start").value;
+       x = parseInt(x);
+       var y = document.getElementById("end").value;
+       y = parseInt(y);
+       var result = 0;
+       var fnal = "Fortnights to Days Converter:  <br><hr><br>"
+       for(var i = x; i <= y; i++)
+       {
+          result = i * 14;
+          fnal = fnal + i + "fortnights: "+ result + " days" + "<br>";
+       }
+       document.getElementById('result3').innerHTML = fnal;
+    }
+    </script>
+ </head>
+ <body>
+   <h1>Old Time Conversion Calculator</h1>
+   <input type = "text" placeholder="Startng Value" id = "start">
+   <input type = "text" placeholder="End Value" id = "end">
+   <input id = button type = "button" value = "Miles to Furlongs" onclick = "mile()">
+   <input id = button type = "button" value = "Slugs to Pounds" onclick = "slug()">
+   <input id = button type = "button" value = "Fortnights to Days" onclick = "fort()">
+   <br><hr><br>
+   <img src = "unitconverter.jpeg"height= "200px" width= "300px">
+   <p id = "result1"></p>
+   <p id = "result2"></p>
+   <p id = "result3"></p>
+   </body>
+ </html>
